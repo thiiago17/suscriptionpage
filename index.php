@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
     <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -19,7 +19,7 @@
       <div class="col-md-6 offset-md-1">
         <br>
         <br>
-        <p><i class="bi bi-amd"></i> Neuralite</p>
+        <p id="empresa"><i class="bi bi-amd"></i> Neuralite</p>
         <p id="titulo">Upgrade to PLUS</p>
         <p>Upgrade today and take you AI-powered productivity to the next level</p>
         <br>
@@ -115,8 +115,8 @@
             <p id="titulo">Starter Plan</p>
               <div class="form-check">
                 <label class="form-check-label" for="plan1">
-                  <input class="form-check-input" type="radio" name="plan1" id="plan1" value="1" checked>
-                  <div class="card">
+                  <input class="form-check-input" type="radio" name="plan" id="plan1" value="option1" checked>
+                  <div class="card" id="planoptions">
                     <div class="card-body">
                       <div class="card-content">
                         <p><b>Pay monthly</b></p>
@@ -131,8 +131,8 @@
 
               <div class="form-check">
                 <label class="form-check-label" for="plan2">
-                  <input class="form-check-input" type="radio" name="plan2" id="plan2" value="2">
-                  <div class="card">
+                  <input class="form-check-input" type="radio" name="plan" id="plan2" value="option2">
+                  <div class="card" id="planoptions">
                     <div class="card-body">
                       <div class="card-content">
                         <p><b>Pay annual</b></p>
@@ -145,9 +145,9 @@
                 <br>
                 <hr>
                 <div class="d-flex">
-                  <span>TOTAL</span>
-                  <span class="ml-auto">$20/month</span>
-                  <span class="ml-auto" hidden>$16/month</span> <!-- usar js -->
+                  <span><b>TOTAL</b></span>
+                  <span class="ml-auto"><b>$20/month</b></span>
+                  <span class="ml-auto" hidden><b>$16/month</b></span> <!-- usar js -->
                 </div>
                 <br>
                 <small><i class="bi bi-shield-lock"></i> This environment is for demostration purposes only. Please refrain from entering any actual sensitive information.</small>

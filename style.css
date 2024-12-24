@@ -64,3 +64,18 @@ button[type="submit"]:hover{
     font-size:x-large;
     font-weight: bold;
 }
+
+input[name="plan"]{
+    display: none;
+}
+
+#planoptions{
+    width: 630px;
+    border-radius: 30px;
+}
+
+#empresa{
+    color: #673ab7;
+    font-size: large;
+    font-weight: bold;
+}
