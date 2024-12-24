@@ -1,0 +1,66 @@
+body{
+    background-color:whitesmoke;
+}
+
+input[name="paymentoption"]{
+    display: none;
+}
+
+input[type="radio"]:checked + .card {
+    border: 2px solid #673ab7; /* Cambiar borde o agregar estilo */
+    background-color: #e7dff5; /* Cambiar fondo */
+  }
+  
+#paymentoptions{
+    width: 300px;
+    border-radius: 30px;
+}
+
+.inputs{
+    height: 75px;
+    border-radius: 15px;
+}
+
+button[type="button"]{
+    height: 60px;
+    width: 100px;
+    color: black;
+    font-size: large;
+    font-weight: 600;
+    background-color: #d7dbdd;
+    border-radius: 20px;
+    border-color: transparent;
+}
+
+button[type="button"]:hover{
+    background-color: #979899;
+    color: black;
+}
+
+button[type="submit"]{
+    height: 60px;
+    width: 825px;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    background-color: #673ab7;
+    border-radius: 20px;
+    border-color: transparent;
+}
+
+button[type="submit"]:hover{
+    background-color: #33077e;
+}
+
+#plan{
+    height: 850px;
+    width: 700px;
+    background-color: rgb(203, 216, 219);
+    border-color: transparent;
+    border-radius: 20px;
+}
+
+#titulo{
+    font-size:x-large;
+    font-weight: bold;
+}
