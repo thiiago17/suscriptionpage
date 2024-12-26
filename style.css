@@ -52,12 +52,25 @@ button[type="submit"]:hover{
     background-color: #33077e;
 }
 
+@media (max-width: 480px) {
+    button[type="submit"] {
+        width: 200px;
+    }
+}
+
 #plan{
     height: 850px;
     width: 700px;
-    background-color: rgb(203, 216, 219);
+    background-color: rgb(222, 227, 231);
     border-color: transparent;
     border-radius: 20px;
+}
+
+@media (max-width: 480px){
+    #plan{
+        height: 600px;
+        width: 350px;
+    }
 }
 
 #titulo{
@@ -72,6 +85,12 @@ input[name="plan"]{
 #planoptions{
     width: 630px;
     border-radius: 30px;
+}
+
+@media (max-width: 480px){
+    #planoptions{
+        width: 250px;
+    }
 }
 
 #empresa{

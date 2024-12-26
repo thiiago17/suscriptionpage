@@ -16,10 +16,10 @@
 <body>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6 offset-md-1">
+      <div class="col-md-6 offset-md-1 order-md-1 order-2"> <!-- order-md-1 indica que en pantallas de tamaño medio se va a mostrar primero este col, mientras que en mas chicas se va a mostrar segundo -->
         <br>
         <br>
-        <p id="empresa"><i class="bi bi-amd"></i> Neuralite</p>
+        <p id="empresa"><i class="bi bi-amd"></i> Nombre de empresa</p>
         <p id="titulo">Upgrade to PLUS</p>
         <p>Upgrade today and take you AI-powered productivity to the next level</p>
         <br>
@@ -104,10 +104,10 @@
           <br>
           <button type="button" class="btn btn-secondary">Cancel</button>
           <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
+
       </div> <!-- col 1 -->
 
-      <div class="col-md-4">
+      <div class="col-md-4 order-md-2 order-1"> <!-- En este caso, en pantallas chicas este col se mostrara primero (order-1), mientras que en pantallas medianas se mostrara despues del primer col -->
         <br>
         <br>
         <div class="card" id="plan">
@@ -146,12 +146,13 @@
                 <hr>
                 <div class="d-flex">
                   <span><b>TOTAL</b></span>
-                  <span class="ml-auto"><b>$20/month</b></span>
-                  <span class="ml-auto" hidden><b>$16/month</b></span> <!-- usar js -->
+                  <span class="ml-auto" id="mes"><b>$20/month</b></span>
+                  <span class="ml-auto" id="año" hidden><b>$16/month</b></span>
                 </div>
                 <br>
                 <small><i class="bi bi-shield-lock"></i> This environment is for demostration purposes only. Please refrain from entering any actual sensitive information.</small>
               </div>
+              </form>
           </div>
         </div>
       </div> <!-- col 2 -->
@@ -164,6 +165,29 @@
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script>
+  // toma los 2 inputs
+  const plan1 = document.getElementById('plan1');
+  const plan2 = document.getElementById('plan2');
 
+  //toma los 2 span donde dice el total por mes
+  const mes = document.getElementById('mes');
+  const año = document.getElementById('año');
+
+  // Función para actualizar visibilidad
+  const updateVisibility = () => {
+    if (plan1.checked) { // verifica si esta seleccionado el plan 1
+      mes.hidden = false; // si esta seleccionado, NO se oculta el valor por mes del plan mensual
+      año.hidden = true; // si esta seleccionado, se oculta el valor por mes del plan anual
+    } else if (plan2.checked) { 
+      mes.hidden = true; // si esta seleccionado el plan 2, se oculta el valor por mes del plan mensual
+      año.hidden = false; // si esta seleccionado el plan 2, NO se oculta el valor por mes del plan anual
+    }
+  };
+
+  // ante cualquier cambio se vuelve a ejecutar el updateVisibility, es decir se verifica nuevamente que plan esta seleccionado y se actualiza el valor de las constantes plan1 y plan2
+  plan1.addEventListener('change', updateVisibility); 
+  plan2.addEventListener('change', updateVisibility);
+  </script>
   </body>
 </html>
